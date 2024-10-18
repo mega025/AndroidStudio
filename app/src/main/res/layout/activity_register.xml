@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@id/loginLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/zenzailtachi"
+        android:fontFamily="@font/montana"
         android:textSize="55dp"
         android:layout_marginTop="10dp"
 
@@ -118,36 +118,37 @@
             android:paddingStart="45dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/loginOlvidarContraseña"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registroContraseña2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/loginContraseña"
+        app:layout_constraintTop_toBottomOf="@id/registroContraseña"
         app:layout_constraintStart_toStartOf="@id/loginGlh2"
-        android:text="¿Has olvidado la contraseña?"
-        />
+        app:layout_constraintEnd_toEndOf="@id/loginGlh3"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        android:layout_marginTop="12dp"
+        app:passwordToggleEnabled="true"
+
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Confirmar Contraseña: "
+            android:inputType="textPersonName"
+            android:paddingStart="45dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-        android:id="@+id/loginBotonEntrar"
-        android:layout_width="120dp"
+        android:id="@+id/loginBotonRegistrarse"
+        android:layout_width="130dp"
         android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/loginContraseña"
+        app:layout_constraintTop_toBottomOf="@id/registroContraseña2"
         app:layout_constraintStart_toStartOf="@id/loginGlh4"
         android:layout_marginTop="20dp"
-        android:hint="Entrar"
+        android:hint="Registrarse"
         android:textColorHint="@color/white"
         android:backgroundTint="@color/black"
         />
 
-    <Button
-        android:id="@+id/loginBotonRegistrar"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/loginBotonEntrar"
-        app:layout_constraintStart_toStartOf="@id/loginGlh4"
-        android:layout_marginTop="10dp"
-        android:hint="Registrar"
-        android:textColorHint="@color/white"
-        android:backgroundTint="@color/black"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
