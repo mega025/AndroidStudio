@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView Bienvenido = findViewById(R.id.welcomeText);
-        TextView parrafo = findViewById(R.id.addedText);
+
 
         SharedPreferences preferences = getSharedPreferences("Usuario",Context.MODE_PRIVATE);
-        String name = preferences.getString("usarUsuario","anonimo");
-        String contraseña = preferences.getString("usarContraseña","contraseña");
+        String name = preferences.getString("usasrUsuario","anonimo");
 
-        Bienvenido.setText("Bienvenido " + name);
-        parrafo.setText("prueba p " + contraseña);
+
+        Bienvenido.setText("Bienvenido a la mejor de APP de senderismo " + name);
+
+
     }
 }
