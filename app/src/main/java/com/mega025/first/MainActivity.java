@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         String name = preferences.getString("usasrUsuario","anonimo");
 
 
-        Bienvenido.setText("Bienvenido a la mejor de APP de senderismo " + name);
+        Bienvenido.setText("Bienvenido a la mejor APP de senderismo " + name);
 
 
     }
