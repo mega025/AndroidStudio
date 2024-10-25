@@ -7,11 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideSplash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77"
+        />
+
     <ImageView
         android:id="@+id/LogoSplash"
-        android:layout_width="120dp"
-        android:layout_height="113dp"
+        android:layout_width="177dp"
+        android:layout_height="219dp"
         android:src="@drawable/bitmap"
+        app:layout_constraintBottom_toTopOf="@+id/GuideSplash1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
