@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,163 +26,60 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button button0 = findViewById(R.id.buttonCero);
-        Button button1 = findViewById(R.id.buttonUno);
-        Button button2 = findViewById(R.id.buttonDos);
-        Button button3 = findViewById(R.id.buttonTres);
-        Button button4 = findViewById(R.id.buttonCuatro);
-        Button button5 = findViewById(R.id.buttonCinco);
-        Button button6 = findViewById(R.id.buttonSeis);
-        Button button7 = findViewById(R.id.buttonSiete);
-        Button button8 = findViewById(R.id.buttonOcoho);
-        Button button9 = findViewById(R.id.buttonNueve);
-        Button buttonsuma = findViewById(R.id.buttonSuma);
-        Button buttonresta = findViewById(R.id.buttonResta);
-        Button buttonmultiplica = findViewById(R.id.buttonMultiplicar);
-        Button buttondividir = findViewById(R.id.buttonDividir);
-        Button buttonigual = findViewById(R.id.buttonCalcular);
-        Button buttonmasmenos = findViewById(R.id.buttonMasMenos);
-        Button buttonpunto = findViewById(R.id.buttonPunto);
 
+        ArrayList<Button> buttonArrayList = new ArrayList<>();
+buttonArrayList.add(findViewById(R.id.buttonCero));
+buttonArrayList.add(findViewById(R.id.buttonUno));
+buttonArrayList.add(findViewById(R.id.buttonDos));
+buttonArrayList.add(findViewById(R.id.buttonTres));
+buttonArrayList.add(findViewById(R.id.buttonCuatro));
+buttonArrayList.add(findViewById(R.id.buttonCinco));
+buttonArrayList.add(findViewById(R.id.buttonSeis));
+buttonArrayList.add(findViewById(R.id.buttonSiete));
+buttonArrayList.add(findViewById(R.id.buttonOcoho));
+buttonArrayList.add(findViewById(R.id.buttonNueve));
+buttonArrayList.add(findViewById(R.id.buttonSuma));
+buttonArrayList.add(findViewById(R.id.buttonResta));
+buttonArrayList.add(findViewById(R.id.buttonMultiplicar));
+buttonArrayList.add(findViewById(R.id.buttonDividir));
+buttonArrayList.add(findViewById(R.id.buttonMasMenos));
+buttonArrayList.add(findViewById(R.id.buttonCalcular));
+buttonArrayList.add(findViewById(R.id.buttonPunto));
+buttonArrayList.add(findViewById(R.id.buttonParentesis));
+buttonArrayList.add(findViewById(R.id.buttonPorcentaje));
+
+
+    Button buttonBorrar = findViewById(R.id.buttonBorrar);
+    Button buttonEliminar = findViewById(R.id.buttonBorrarTodo);
         TextView Pantalla = findViewById(R.id.text);
-        Pantalla.setText("0");
 
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "0";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "1";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "2";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "3";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "4";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "5";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "6";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "7";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "8";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "9";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonsuma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "+";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonresta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "-";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonmultiplica.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "x";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttondividir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "/";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonigual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "=";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonmasmenos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += "+/-";
-                Pantalla.setText(textoPantalla);
-            }
-        });
-        buttonpunto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String textoPantalla = (String) Pantalla.getText();
-                textoPantalla += ".";
-                Pantalla.setText(textoPantalla);
-            }
-        });
+        Pantalla.setText("");
+
+        for (Button button : buttonArrayList){
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String textoPantalla = Pantalla.getText().toString();
+                    textoPantalla += button.getText().toString();
+                    Pantalla.setText(textoPantalla);
+                }
+            });
+        }
+
+
+       buttonBorrar.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               for (int i = Pantalla.length() - 1 ; i >= 0; i--){
+                   buttonBorrar
+
+               }
+
+
+
+           }
+       });
+
 
     }
 }

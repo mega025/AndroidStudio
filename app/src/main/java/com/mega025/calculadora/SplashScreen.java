@@ -24,6 +24,7 @@ public class SplashScreen extends AppCompatActivity {
             return insets;
 
         });
+        launchMain();
     }
 
         public void launchMain(){
