@@ -71,7 +71,8 @@ buttonArrayList.add(findViewById(R.id.buttonPorcentaje));
            @Override
            public void onClick(View view) {
                for (int i = Pantalla.length() - 1 ; i >= 0; i--){
-                   buttonBorrar
+                  String linea;
+                   Pantalla.
 
                }
 
