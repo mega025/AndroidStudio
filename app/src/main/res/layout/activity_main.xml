@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -16,7 +15,11 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="183dp"
-            android:text="Escribe aqui" />
+            android:gravity="end|center_vertical"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,45 +27,45 @@
             android:orientation="horizontal">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonBorrarTodo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="C" />
+                android:backgroundTint="@color/azul2"
+                android:text="C"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonParentesis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="(    )" />
+                android:backgroundTint="@color/azul2"
+                android:text="( )"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonPorcentaje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="%" />
+                android:backgroundTint="@color/azul2"
+                android:text="%"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonBorrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:icon="@drawable/delete_icon"
-                />
+                android:backgroundTint="@color/azul2"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:drawableTop="@drawable/delete_icon"
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,43 +74,44 @@
             android:orientation="horizontal">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonUno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1" />
+                android:backgroundTint="@color/azul2"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonDos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="2" />
+                android:backgroundTint="@color/azul2"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonTres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="3" />
-            <Button
                 android:backgroundTint="@color/azul2"
+                android:text="3"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25dp" />
+
+            <Button
                 android:id="@+id/buttonSuma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="+" />
+                android:backgroundTint="@color/azul2"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -116,88 +120,90 @@
             android:orientation="horizontal">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonCuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="4" />
+                android:backgroundTint="@color/azul2"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonCinco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="5" />
+                android:backgroundTint="@color/azul2"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonSeis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="6" />
-            <Button
                 android:backgroundTint="@color/azul2"
+                android:text="6"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25dp" />
+
+            <Button
                 android:id="@+id/buttonResta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="-" />
-
+                android:backgroundTint="@color/azul2"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonSiete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="7" />
+                android:backgroundTint="@color/azul2"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:id="@+id/buttonOcoho"
+                android:id="@+id/buttonOcho"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="8" />
+                android:backgroundTint="@color/azul2"
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonNueve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="9" />
-            <Button
                 android:backgroundTint="@color/azul2"
+                android:text="9"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25dp" />
+
+            <Button
                 android:id="@+id/buttonMultiplicar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="x" />
+                android:backgroundTint="@color/azul2"
+                android:text="x"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -206,64 +212,60 @@
             android:orientation="horizontal">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonMasMenos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="+/-" />
+                android:backgroundTint="@color/azul2"
+                android:text="+/-"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonCero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0" />
+                android:backgroundTint="@color/azul2"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonPunto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="." />
+                android:backgroundTint="@color/azul2"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="25dp" />
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
-                android:textSize="25dp"
                 android:id="@+id/buttonDividir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="/" />
-
-
+                android:backgroundTint="@color/azul2"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
         </LinearLayout>
-        <LinearLayout
 
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="200dp">
+            android:layout_marginTop="20dp">
 
             <Button
-                android:backgroundTint="@color/azul2"
-                android:textColor="@color/black"
                 android:id="@+id/buttonCalcular"
-                android:textSize="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calcular" />
+                android:backgroundTint="@color/azul2"
+                android:text="Calcular"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
         </LinearLayout>
-
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
