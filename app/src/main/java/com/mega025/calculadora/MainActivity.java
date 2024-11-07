@@ -70,14 +70,8 @@ buttonArrayList.add(findViewById(R.id.buttonPorcentaje));
        buttonBorrar.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               for (int i = Pantalla.length() - 1 ; i >= 0; i--){
-                  String linea;
-                   Pantalla.
 
-               }
-
-
-
+  
            }
        });
 
