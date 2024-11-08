@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.mega025.first.R;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
