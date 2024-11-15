@@ -16,6 +16,6 @@
         />
     <item
         android:id="@+id/myCodeButton"
-        android:title="Item"
+        android:title="mi codigo"
         app:showAsAction="never"/>
 </menu>

@@ -47,7 +47,7 @@ public class Aficiones extends AppCompatActivity {
         }
         if (id == R.id.myCodeButton){
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(""));
+            intent.setData(Uri.parse("https://github.com/mega025"));
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
