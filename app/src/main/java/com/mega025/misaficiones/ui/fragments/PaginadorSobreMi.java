@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.mega025.misaficiones.fr.aficiones.Datos;
+import com.mega025.misaficiones.fr.aficiones.Foto;
 import com.mega025.misaficiones.fr.aficiones.Informacion;
 
 public class PaginadorSobreMi extends FragmentPagerAdapter {
@@ -26,6 +27,8 @@ public class PaginadorSobreMi extends FragmentPagerAdapter {
             case 0:
                 return new Datos();
             case 1:
+                return new Foto();
+            case 2:
                 return new Informacion();
             default:
                 return null;
@@ -34,6 +37,6 @@ public class PaginadorSobreMi extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
