@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MisAficiones</string>
     <string name="title_activity_aficiones">Aficiones</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Gyozas</string>
+    <string name="tab_text_2">Hotpot</string>
     <string name="title_activity_sobre_mi">SobreMi</string>
+    <string name="title_activity_tipos_comida">TiposComida</string>
 </resources>

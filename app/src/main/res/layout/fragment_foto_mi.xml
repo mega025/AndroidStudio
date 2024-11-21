@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:text="Foto mia ne shanghai metro de disneyland"
+        android:text="Foto mia en shanghai metro de disneyland"
         android:textSize="40px"
         app:layout_constraintBottom_toTopOf="@+id/yo"
         app:layout_constraintEnd_toEndOf="parent"

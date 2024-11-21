@@ -26,7 +26,7 @@ tambien salgo a hacer ejercicio gran parte de las veces en el gymnasio aunque pr
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:text="Inforamción"
+        android:text="Información"
         android:textColor="@color/red"
         android:textSize="70px"
         app:layout_constraintEnd_toEndOf="parent"

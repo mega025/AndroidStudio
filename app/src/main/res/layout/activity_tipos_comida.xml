@@ -4,14 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SobreMi">
+    tools:context="com.mega025.misaficiones.TiposComida">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Base.Theme.MisAficiones.AppBarOverlay">
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text=" Comidas"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:textColor="@color/black"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -28,20 +44,4 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:minHeight="?actionBarSize"
-        android:padding="@dimen/appbar_padding"
-        android:text="Sobre mi"
-        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-
-        android:textColor="@color/black"
-        app:layout_anchor="@+id/appBarLayout"
-        app:layout_anchorGravity="center" />
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

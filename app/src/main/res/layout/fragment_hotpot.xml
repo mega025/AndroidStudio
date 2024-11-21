@@ -3,31 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#59A25B">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="669dp"
+        android:layout_height="735dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/liuus_hotpot" />
 
     <TextView
-        android:id="@+id/textoComer"
+        android:id="@+id/InfoHotpot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como me gusta comer"
-        android:textSize="100px"
-        android:textColor="#FFBF00"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Comida que siempre entra en invierno ya que estas en un lugar calentito mientras comes y bebes junto a tu familia o amigos, me gusta debido a q puedes estar mucho tiempo alli mientras comes , bebes y hablas con la gente."
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/BotonComer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saber más"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoComer"
-        app:layout_constraintVertical_bias="0.263" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
