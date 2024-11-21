@@ -13,7 +13,12 @@
         android:theme="@style/Base.Theme.MisAficiones"
         tools:targetApi="31">
         <activity
-            android:name="com.mega025.misaficiones.TiposComida"
+            android:name=".Favoritos"
+            android:exported="false"
+            android:label="@string/title_activity_favoritos"
+            android:theme="@style/Base.Theme.MisAficiones.NoActionBar" />
+        <activity
+            android:name=".TiposComida"
             android:exported="false"
             android:label="@string/title_activity_tipos_comida"
             android:theme="@style/Base.Theme.MisAficiones.NoActionBar" />

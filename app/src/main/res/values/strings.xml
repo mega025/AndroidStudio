@@ -5,4 +5,5 @@
     <string name="tab_text_2">Hotpot</string>
     <string name="title_activity_sobre_mi">SobreMi</string>
     <string name="title_activity_tipos_comida">TiposComida</string>
+    <string name="title_activity_favoritos">Favoritos</string>
 </resources>

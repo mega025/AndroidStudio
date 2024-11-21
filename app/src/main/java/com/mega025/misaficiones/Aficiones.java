@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.mega025.misaficiones.databinding.ActivityAficionesBinding;
@@ -37,10 +38,18 @@ public class Aficiones extends AppCompatActivity {
 
         public boolean onOptionsItemSelected(@NonNull MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.favButton){
-            Toast toast = Toast.makeText(this, "como me gusta mis aficciones", Toast.LENGTH_SHORT);
-            toast.show();
-        }
+            if (id == R.id.favButton){
+                ViewPager viewPager = binding.viewPager;
+                int currentItem = viewPager.getCurrentItem();
+
+
+                Paginador paginador = (Paginador) viewPager.getAdapter();
+                if (paginador != null){
+                    Fragment frActual = paginador.getItem(currentItem);
+                    Favorito.getInstance().añadirFavorito(frActual);
+                    Toast.makeText(this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
+                }
+            }
         if (id == R.id.aboutMeButton){
             Intent intent = new Intent(Aficiones.this, SobreMi.class);
 
