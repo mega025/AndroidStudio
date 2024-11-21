@@ -10,7 +10,7 @@
         android:id="@+id/textoComer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como me gusta comer"
+        android:text="Me gusta la comida"
         android:textSize="100px"
         android:textColor="#FFBF00"
         app:layout_constraintBottom_toBottomOf="parent"

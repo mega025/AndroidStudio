@@ -10,7 +10,7 @@
         android:id="@+id/textoDormir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como me gusta dormir"
+        android:text="Me gusta las actividades físicas"
         android:textSize="100px"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

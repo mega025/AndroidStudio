@@ -4,4 +4,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#11E5FF</color>
     <color name="red">#FB0000</color>
+    <color name="fondo">#F58510</color>
+    <color name="letra">#1170F5</color>
+    <color name="letra2">#11F5E9</color>
+    <color name="fondo2">#755D43</color>
+    <color name="fondo3">#437573</color>
+    <color name="fondoyo">#40F50A</color>
+    <color name="letrayo">#F50B00</color>
+
 </resources>
