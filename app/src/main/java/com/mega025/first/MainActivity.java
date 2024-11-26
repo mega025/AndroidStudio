@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,41 @@ public class MainActivity extends AppCompatActivity {
 
         Button callDialogButton  = findViewById(R.id.verMas);
         callDialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(MainActivity.this)
+                .setTitle("Hola " + name)
+                .setMessage("¿Quieres cambiar de nombre ?")
+                .setPositiveButton("si", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Snackbar.make(view, "cambiar nombre", Snackbar.LENGTH_SHORT)
+                                .setAction("Cambiar", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Toast.makeText(MainActivity.this, "Clic", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                }).show();
+
+                    }
+
+
+                })
+                .setNegativeButton("no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                materialAlertDialogBuilder.show();
+
+            }
+        });
+
+
+        // dialog forma antigua
+        Bienvenido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainActivity.this);
