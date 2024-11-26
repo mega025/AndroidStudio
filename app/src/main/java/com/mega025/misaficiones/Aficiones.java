@@ -44,11 +44,11 @@ public class Aficiones extends AppCompatActivity {
 
 
                 Paginador paginador = (Paginador) viewPager.getAdapter();
-                if (paginador != null){
-                    Fragment frActual = paginador.getItem(currentItem);
-                    Favorito.getInstance().añadirFavorito(frActual);
-                    Toast.makeText(this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
-                }
+              //  if (paginador != null){
+                 //   Fragment frActual = paginador.getItem(currentItem);
+                 //   Favorito.getInstance().añadirFavorito(frActual);
+                 //   Toast.makeText(this, "Añadido a favoritos", Toast.LENGTH_SHORT).show();
+                //}
             }
         if (id == R.id.aboutMeButton){
             Intent intent = new Intent(Aficiones.this, SobreMi.class);
