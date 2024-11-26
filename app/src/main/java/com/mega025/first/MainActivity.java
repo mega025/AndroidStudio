@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         callDialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainActivity.this);
                 dialogBuilder.setMessage("hola" + name);
                 dialogBuilder.setCancelable(true);
                 dialogBuilder.setPositiveButton("Si soy yo", new DialogInterface.OnClickListener() {
