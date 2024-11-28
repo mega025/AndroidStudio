@@ -66,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
                                                                 EditText cambioDeNombreTexto = inflator.findViewById(R.id.cambioDeNombreTexto); // coges de la bolsa lo mas necesario
                                                                 String nombreReal = cambioDeNombreTexto.getText().toString();
 
-                                                                SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE); //abres el armario
-                                                                SharedPreferences.Editor editor = preferences.edit(); // cambias los datos dentro del armario ( es privado)
-                                                                editor.putString("name", nombreReal); // confirmas los cambios que has hecho
+                                                                SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE);  // Almacena el nuevo nombre en las preferencias compartidas en los lugares que tu permites porque es privada
+                                                                SharedPreferences.Editor editor = preferences.edit(); // Inicializa el editor de preferencias
+                                                                editor.putString("name", nombreReal); // Guarda el nuevo nombre en las preferencias
+                                                                editor.apply();// Aplica los cambios
                                                                 Bienvenido.setText("Hola "+nombreReal); // alguien abre el armario pero solo puede ver sus datos cambiado o sin cambiar
                                                             }
                                                         });
