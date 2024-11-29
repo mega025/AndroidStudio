@@ -40,6 +40,7 @@ public class SplashScreen extends AppCompatActivity {
         TextView splashAppName = findViewById(R.id.splashAppName);
         splashlogo.startAnimation(gradientColor);
         splashAppName.startAnimation(gradientColor);
+
         ImageView glideBackground = findViewById(R.id.splashGlideBackground);
 
 
