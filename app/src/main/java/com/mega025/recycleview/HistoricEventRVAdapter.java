@@ -1,6 +1,7 @@
 package com.mega025.recycleview;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 
@@ -39,12 +42,45 @@ public class HistoricEventRVAdapter extends RecyclerView.Adapter<HistoricEventRV
     // Método que enlaza los datos de la lista al ViewHolder para una posición específica.
     @Override
     public void onBindViewHolder(@NonNull HistoricEventRVAdapter.MyViewHolder holder, int position) {
+
         // Establece el nombre del evento en el TextView correspondiente.
-        holder.tvEventName.setText(historicEventModels.get(position).getEventName());
+        String eventName = historicEventModels.get(position).getEventName();
+         holder.tvEventName.setText(eventName);
+
+
         // Establece la fecha del evento en el TextView correspondiente.
-        holder.tvEventDate.setText(historicEventModels.get(position).getEventDate());
+        String eventDate = historicEventModels.get(position).getEventDate();
+         holder.tvEventDate.setText(eventDate);
+
+
         // Establece la ubicación del evento en el TextView correspondiente.
-        holder.tvEventLocation.setText(historicEventModels.get(position).getEventLocation());
+        String eventLocation = historicEventModels.get(position).getEventLocation();
+        holder.tvEventLocation.setText(eventLocation);
+
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(context)
+                        .setIcon(R.drawable.baseline_menu_book_24)
+                        .setTitle(eventName)
+                        .setMessage("Este evento sucedio en el año " + eventDate)
+                        .setPositiveButton("si", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        })
+                        .setNegativeButton("no", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                materialAlertDialogBuilder.show();
+            }
+        });
     }
 
     // Método que devuelve el número total de elementos en la lista.
