@@ -2,16 +2,26 @@ package com.mega025.recycleview;
 
 public class VideojuegosModel {
     public String preguntas;
+    public String colors;
 
     public VideojuegosModel(String preguntas) {
         this.preguntas = preguntas;
+
     }
 
-    public String getPregutnas() {
+    public String getPreguntas() {
         return preguntas;
     }
 
-    public void setPregutnas(String preguntas) {
+    public String getColors() {
+        return colors;
+    }
+
+    public void setPreguntas(String preguntas) {
         this.preguntas = preguntas;
+    }
+
+    public void setColors(String colors) {
+        this.colors = colors;
     }
 }

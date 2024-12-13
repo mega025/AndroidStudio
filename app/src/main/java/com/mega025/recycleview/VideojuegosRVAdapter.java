@@ -19,7 +19,6 @@ public class VideojuegosRVAdapter extends RecyclerView.Adapter<VideojuegosRVAdap
 
     Context context;
     ArrayList<VideojuegosModel> videojuegosModels;
-
     public VideojuegosRVAdapter(Context context, ArrayList<VideojuegosModel> videojuegosModels) {
         this.context = context;
         this.videojuegosModels = videojuegosModels;
@@ -36,9 +35,9 @@ public class VideojuegosRVAdapter extends RecyclerView.Adapter<VideojuegosRVAdap
     @Override
     public void onBindViewHolder(@NonNull VideojuegosRVAdapter.MyViewHolder holder, int position) {
 
-        String preguntas = videojuegosModels.get(position).getPregutnas();
+        String preguntas = videojuegosModels.get(position).getPreguntas();
          holder.pregunta.setText(preguntas);
-         String respuestas = videojuegosModels.get(position).getPregutnas();
+         String respuestas = videojuegosModels.get(position).getPreguntas();
          holder.respuesta.setText(respuestas);
 
 

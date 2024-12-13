@@ -62,7 +62,7 @@
         <item>¿Cuál es el Pokémon inicial tipo fuego en la primera generación?</item>
         <item>¿Qué consola fue la primera en usar CDs en lugar de cartuchos?</item>
         <item>¿Cómo se llama el creador de Metal Gear Solid?</item>
-        <item>¿Qué se debe recolectar en Pac-Man para ganar puntos?</item>
+        <item>¿Qué saga de videojuegos popularizó el género Battle Royale?</item>
         <item>¿En qué juego se utiliza la herramienta llamada "Pip-Boy"?</item>
         <item>¿Qué nombre tenía la primera consola de videojuegos de Sony?</item>
         <item>¿En qué videojuego debes destruir líneas de bloques para ganar?</item>
@@ -80,7 +80,7 @@
         <item>Charmander</item>
         <item>PlayStation</item>
         <item>Hideo Kojima</item>
-        <item>Pellets</item>
+        <item>PUBG</item>
         <item>Fallout</item>
         <item>PlayStation</item>
         <item>Tetris</item>
@@ -89,5 +89,7 @@
         <item>Animal Crossing</item>
         <item>Zebes</item>
     </string-array>
+
+
 
 </resources>

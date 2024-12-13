@@ -141,4 +141,23 @@
     <color name="md_theme_surfaceContainer_highContrast">#EEEFE3</color>
     <color name="md_theme_surfaceContainerHigh_highContrast">#E8E9DE</color>
     <color name="md_theme_surfaceContainerHighest_highContrast">#E2E3D8</color>
+
+    <resources>
+        <color name="color_minecraft">#A8E6CF</color>
+        <color name="color_zelda">#77AB59</color>
+        <color name="color_fortnite">#915EFF</color>
+        <color name="color_mario">#FF6F61</color>
+        <color name="color_charmander">#FFA726</color>
+        <color name="color_playstation">#B0BEC5</color>
+        <color name="color_mgs">#37474F</color>
+        <color name="color_pubg">#FFB74D</color>
+        <color name="color_pipboy">#76FF03</color>
+        <color name="color_psx">#CFD8DC</color>
+        <color name="color_tetris">#2196F3</color>
+        <color name="color_wow">#1E88E5</color>
+        <color name="color_gta">#9E9E9E</color>
+        <color name="color_animalcrossing">#B2FF59</color>
+        <color name="color_metroid">#FF7043</color>
+    </resources>
+
 </resources>
