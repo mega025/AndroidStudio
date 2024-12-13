@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
         ArrayList<HistoricEventModel> historicEvents = new ArrayList<>();
+        ArrayList<VideojuegosModel> videojuegosModels = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +26,15 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         RecyclerView historicalRecycleView = findViewById(R.id.recycleViewHistoricEvents);
-        setHistoricEvents();
+        setVideojuegos();
 
         HistoricEventRVAdapter adapter = new HistoricEventRVAdapter(
                 this, historicEvents
         );
-        historicalRecycleView.setAdapter(adapter);
+        VideojuegosRVAdapter adapter1 = new VideojuegosRVAdapter(
+                this, videojuegosModels
+        );
+        historicalRecycleView.setAdapter(adapter1);
         historicalRecycleView.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -47,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
             )
             );
             
+        }
+    }
+
+    private void setVideojuegos(){
+        String [] preguntas = getResources().getStringArray(R.array.Preguntas);
+        for (int i = 0; i < preguntas.length; i++) {
+            videojuegosModels.add(new VideojuegosModel(
+                    preguntas[i]
+            ));
+
         }
     }
 }

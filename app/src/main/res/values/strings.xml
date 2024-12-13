@@ -53,4 +53,41 @@
         <item> Rusia</item>
         <item> Estados Unidos</item>
     </string-array>
+
+    <string-array name="Preguntas">
+        <item>¿Cuál es el juego más vendido de todos los tiempos?</item>
+        <item>¿Cuál es el personaje principal de la saga The Legend of Zelda?</item>
+        <item>¿Qué compañía desarrolló el juego Fortnite?</item>
+        <item>¿Cómo se llama el creador de Super Mario Bros?</item>
+        <item>¿Cuál es el Pokémon inicial tipo fuego en la primera generación?</item>
+        <item>¿Qué consola fue la primera en usar CDs en lugar de cartuchos?</item>
+        <item>¿Cómo se llama el creador de Metal Gear Solid?</item>
+        <item>¿Qué se debe recolectar en Pac-Man para ganar puntos?</item>
+        <item>¿En qué juego se utiliza la herramienta llamada "Pip-Boy"?</item>
+        <item>¿Qué nombre tenía la primera consola de videojuegos de Sony?</item>
+        <item>¿En qué videojuego debes destruir líneas de bloques para ganar?</item>
+        <item>¿Qué videojuego incluye los reinos de Azeroth, Kalimdor y Northrend?</item>
+        <item>¿Cómo se llama la ciudad principal en Grand Theft Auto V?</item>
+        <item>¿Qué juego de Nintendo incluye un pueblo lleno de animales antropomórficos?</item>
+        <item>¿En qué planeta se desarrolla la mayoría de los juegos de la saga Metroid?</item>
+    </string-array>
+
+    <string-array name="Respuestas">
+        <item>Tetris </item>
+        <item>Link</item>
+        <item>Epic Games</item>
+        <item>Shigeru Miyamoto</item>
+        <item>Charmander</item>
+        <item>PlayStation</item>
+        <item>Hideo Kojima</item>
+        <item>Pellets</item>
+        <item>Fallout</item>
+        <item>PlayStation</item>
+        <item>Tetris</item>
+        <item>World of Warcraft</item>
+        <item>Los Santos</item>
+        <item>Animal Crossing</item>
+        <item>Zebes</item>
+    </string-array>
+
 </resources>
