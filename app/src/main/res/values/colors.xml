@@ -142,7 +142,7 @@
     <color name="md_theme_surfaceContainerHigh_highContrast">#E8E9DE</color>
     <color name="md_theme_surfaceContainerHighest_highContrast">#E2E3D8</color>
 
-    <resources>
+
         <color name="color_minecraft">#A8E6CF</color>
         <color name="color_zelda">#77AB59</color>
         <color name="color_fortnite">#915EFF</color>
@@ -158,6 +158,6 @@
         <color name="color_gta">#9E9E9E</color>
         <color name="color_animalcrossing">#B2FF59</color>
         <color name="color_metroid">#FF7043</color>
-    </resources>
+
 
 </resources>

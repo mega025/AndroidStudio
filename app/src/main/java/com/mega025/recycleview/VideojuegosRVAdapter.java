@@ -37,8 +37,8 @@ public class VideojuegosRVAdapter extends RecyclerView.Adapter<VideojuegosRVAdap
 
         String preguntas = videojuegosModels.get(position).getPreguntas();
          holder.pregunta.setText(preguntas);
-         String respuestas = videojuegosModels.get(position).getPreguntas();
-         holder.respuesta.setText(respuestas);
+//         String respuestas = videojuegosModels.get(position).getPreguntas();
+//         holder.respuesta.setText(respuestas);
 
 
 

@@ -8,20 +8,11 @@ public class VideojuegosModel {
         this.preguntas = preguntas;
 
     }
-
     public String getPreguntas() {
         return preguntas;
     }
 
-    public String getColors() {
-        return colors;
-    }
-
     public void setPreguntas(String preguntas) {
         this.preguntas = preguntas;
-    }
-
-    public void setColors(String colors) {
-        this.colors = colors;
     }
 }
