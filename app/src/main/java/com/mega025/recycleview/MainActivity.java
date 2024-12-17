@@ -56,9 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void setVideojuegos(){
         String [] preguntas = getResources().getStringArray(R.array.Preguntas);
+        String [] colores = getResources().getStringArray(R.array.color);
         for (int i = 0; i < preguntas.length; i++) {
             videojuegosModels.add(new VideojuegosModel(
-                    preguntas[i]
+                    preguntas[i],
+                    colores[i]
+
             ));
 
         }

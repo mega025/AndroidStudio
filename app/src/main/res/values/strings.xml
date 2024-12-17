@@ -90,6 +90,41 @@
         <item>Zebes</item>
     </string-array>
 
+    <string-array name="color">
+        <item name="color_minecraft">#A8E6CF</item>
+        <item name="color_zelda">#77AB59</item>
+        <item name="color_fortnite">#915EFF</item>
+        <item name="color_mario">#FF6F61</item>
+        <item name="color_charmander">#FFA726</item>
+        <item name="color_playstation">#B0BEC5</item>
+        <item name="color_mgs">#37474F</item>
+        <item name="color_pubg">#FFB74D</item>
+        <item name="color_pipboy">#76FF03</item>
+        <item name="color_psx">#CFD8DC</item>
+        <item name="color_tetris">#2196F3</item>
+        <item name="color_wow">#1E88E5</item>
+        <item name="color_gta">#9E9E9E</item>
+        <item name="color_animalcrossing">#B2FF59</item>
+        <item name="color_metroid">#FF7043</item>
+    </string-array>
+
+    <string-array name="Imagenes">
+        <item>https://upload.wikimedia.org/wikipedia/commons/4/46/Tetris_logo.png</item>
+        <item>https://static.posters.cz/image/750/pinturas-sobre-lienzo-the-legend-of-zelda-breath-of-the-wild-view-i111060.jpg</item>
+        <item>https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/09/fortnite-2066927.jpg?tf=3840x</item>
+        <item>https://www.nintendo.com/eu/media/images/10_share_images/games_15/virtual_console_nintendo_3ds_7/SI_3DSVC_SuperMarioBros.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png</item>
+        <item>https://erikstore.com/blog/wp-content/uploads/2024/04/BannerBlog_CONSOLAS_EVOLUCION.webp</item>
+        <item>https://estaticos-cdn.prensaiberica.es/clip/3280ef72-2f01-456f-b11a-cafc741d6fdb_16-9-discover-aspect-ratio_default_0.jpg</item>
+        <item>https://img.unocero.com/2023/08/Free-Fire-el-fenomeno-global-de-los-Battle-Royale-para-moviles-2-1024x602.jpg</item>
+        <item>https://www.movilzona.es/app/uploads-movilzona.es/2015/06/pip-boy.jpg</item>
+        <item>https://erikstore.com/blog/wp-content/uploads/2022/12/Playstation-origen-y-evolucion.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/4/46/Tetris_logo.png</item>
+        <item>https://static.wikia.nocookie.net/wowpedia/images/6/6d/Chronicle_-_Map_of_Azeroth.jpg/revision/latest/scale-to-width-down/985?cb=20180325215922</item>
+        <item>https://www.allkeyshop.com/blog/wp-content/uploads/GTA-5-Game-Pass.webp</item>
+        <item>https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/04/animal-crossing-new-horizons-1926999.jpg?tf=3840x</item>
+        <item>https://i.blogs.es/3eeef9/metroid_samus_returns_character_artwork/1366_2000.jpeg</item>
+    </string-array>
 
 
 </resources>
