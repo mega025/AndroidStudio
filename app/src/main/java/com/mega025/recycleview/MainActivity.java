@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         );
         historicalRecycleView.setAdapter(adapter1);
         historicalRecycleView.setLayoutManager(new LinearLayoutManager(this));
+
+        Glide.with(this);
+
     }
 
     private void setHistoricEvents(){
