@@ -90,23 +90,7 @@
         <item>Zebes</item>
     </string-array>
 
-    <string-array name="color">
-        <item name="color_minecraft">#A8E6CF</item>
-        <item name="color_zelda">#77AB59</item>
-        <item name="color_fortnite">#915EFF</item>
-        <item name="color_mario">#FF6F61</item>
-        <item name="color_charmander">#FFA726</item>
-        <item name="color_playstation">#B0BEC5</item>
-        <item name="color_mgs">#37474F</item>
-        <item name="color_pubg">#FFB74D</item>
-        <item name="color_pipboy">#76FF03</item>
-        <item name="color_psx">#CFD8DC</item>
-        <item name="color_tetris">#2196F3</item>
-        <item name="color_wow">#1E88E5</item>
-        <item name="color_gta">#9E9E9E</item>
-        <item name="color_animalcrossing">#B2FF59</item>
-        <item name="color_metroid">#FF7043</item>
-    </string-array>
+
 
     <string-array name="Imagenes">
         <item>https://upload.wikimedia.org/wikipedia/commons/4/46/Tetris_logo.png</item>

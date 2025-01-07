@@ -1,23 +1,29 @@
 package com.mega025.recycleview;
 
+import java.util.ArrayList;
+
 public class VideojuegosModel {
-    public String preguntas;
-    public String colors;
-    public String imagen;
+    private String pregunta;
+    private String respuestaCorrecta;
+    private ArrayList<String> opciones;
 
-    public VideojuegosModel(String preguntas, String colors) {
-        this.preguntas = preguntas;
-
-    }
-    public String getPreguntas() {
-        return preguntas;
+    public VideojuegosModel(String pregunta, String respuestaCorrecta, ArrayList<String> opciones) {
+        this.pregunta = pregunta;
+        this.respuestaCorrecta = respuestaCorrecta;
+        this.opciones = opciones;
     }
 
-    public void setPreguntas(String preguntas) {
-        this.preguntas = preguntas;
+    public String getPregunta() {
+        return pregunta;
     }
 
-    public String getColors() {
-        return colors;
+    public String getRespuestaCorrecta() {
+        return respuestaCorrecta;
+    }
+
+    public String[] getOpciones() {
+        return opciones.toArray(new String[0]);
     }
 }
+
+

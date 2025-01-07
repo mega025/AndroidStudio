@@ -6,11 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.mega025.recycleview.R;
 
 import java.util.ArrayList;
 
@@ -32,40 +34,37 @@ public class VideojuegosRVAdapter extends RecyclerView.Adapter<VideojuegosRVAdap
         return new VideojuegosRVAdapter.MyViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull VideojuegosRVAdapter.MyViewHolder holder, int position) {
+        String pregunta = videojuegosModels.get(position).getPregunta();
+        String respuestaCorrecta = videojuegosModels.get(position).getRespuestaCorrecta();
+        String[] opciones = videojuegosModels.get(position).getOpciones();
 
-        String preguntas = videojuegosModels.get(position).getPreguntas();
-         holder.pregunta.setText(preguntas);
-//         String respuestas = videojuegosModels.get(position).getPreguntas();
-//         holder.respuesta.setText(respuestas);
+        holder.pregunta.setText(pregunta);
+
+        holder.itemView.setOnClickListener(view -> {
+            MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(context)
+                    .setIcon(R.drawable.baseline_gamepad_24)
+                    .setTitle(pregunta)
+                    .setSingleChoiceItems(opciones, -1, (dialog, which) -> {
+                        if (opciones[which].equals(respuestaCorrecta)) {
+                            Toast.makeText(context, "¡Respuesta correcta!", Toast.LENGTH_SHORT).show();
 
 
-
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(context)
-                        .setIcon(R.drawable.baseline_gamepad_24)
-                        .setTitle(preguntas)
-                        .setPositiveButton("Lo sé", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        })
-
-                        .setNegativeButton("No lo sé", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        });
-                materialAlertDialogBuilder.show();
-            }
+                            videojuegosModels.remove(position);
+                            notifyItemRemoved(position);
+                            notifyItemRangeChanged(position, videojuegosModels.size());
+                        } else {
+                            Toast.makeText(context, "¡Respuesta incorrecta!", Toast.LENGTH_SHORT).show();
+                        }
+                        dialog.dismiss();
+                    })
+                    .setNegativeButton("Cancelar", null);
+            dialogBuilder.show();
         });
     }
+
 
 
     @Override
