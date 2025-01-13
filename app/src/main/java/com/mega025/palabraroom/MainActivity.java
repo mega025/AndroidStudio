@@ -7,8 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.LiveData;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+        LiveData<List<Palabra>> palabraEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        RecyclerView palabraRecycleView = findViewById(R.id.Palabra);
+
+        PalabraRVAdapter adapter = new PalabraRVAdapter(this, palabraEvent);
+        palabraRecycleView.setAdapter(adapter);
+        palabraRecycleView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

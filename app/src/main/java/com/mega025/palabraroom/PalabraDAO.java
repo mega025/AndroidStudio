@@ -11,9 +11,11 @@ import java.util.List;
 @Dao
 public interface PalabraDAO {
 
+    //insertar fila en la tabla y se si se repite la clave el conflicto es omitido y no se insertara la fila
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert (Palabra palabra);
 
+    // query ejecuta la consulta SQL directa
     @Query("DELETE FROM tabla_palabra")
     void deleteAll();
 
