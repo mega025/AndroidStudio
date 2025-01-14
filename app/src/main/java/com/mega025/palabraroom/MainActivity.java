@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
         RecyclerView palabraRecycleView = findViewById(R.id.Palabra);
 
-        PalabraRVAdapter adapter = new PalabraRVAdapter(this, palabraEvent);
+        final PalabraRVAdapter adapter = new PalabraRVAdapter(new PalabraRVAdapter.WordDiff());
         palabraRecycleView.setAdapter(adapter);
         palabraRecycleView.setLayoutManager(new LinearLayoutManager(this));
     }
