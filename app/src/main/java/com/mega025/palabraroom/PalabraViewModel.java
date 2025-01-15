@@ -17,12 +17,15 @@ public class PalabraViewModel  extends AndroidViewModel {
         mPalabraRepository = new PalabraRepository(application);
         mPalabra = mPalabraRepository.getAllPalabras();
     }
+    public void delete(Palabra palabra) {
+        mPalabraRepository.delete(palabra);
+    }
 
     LiveData<List<Palabra>> getPalabra(){
         return mPalabra;
     }
 
-    public  void insert (Palabra palabra){
+    public void insert (Palabra palabra){
         mPalabraRepository.insert(palabra);
     }
 

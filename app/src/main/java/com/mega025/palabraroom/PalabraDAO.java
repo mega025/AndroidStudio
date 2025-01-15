@@ -2,6 +2,7 @@ package com.mega025.palabraroom;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -21,5 +22,8 @@ public interface PalabraDAO {
 
     @Query("SELECT * FROM  tabla_palabra ORDER BY palabra ASC")
     LiveData<List<Palabra>> getPalabrasOrdenadas();
+
+    @Delete
+    void delete(Palabra palabra);
 
 }
