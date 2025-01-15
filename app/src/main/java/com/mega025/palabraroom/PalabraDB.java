@@ -8,6 +8,7 @@ import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 import java.util.concurrent.ExecutorService;
@@ -41,6 +42,5 @@ public abstract class PalabraDB extends RoomDatabase{
         }
         return INSTANCE;
     }
-
 
 }
