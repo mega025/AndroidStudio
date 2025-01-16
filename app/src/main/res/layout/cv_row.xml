@@ -30,7 +30,7 @@
                 android:layout_marginTop="15dp"
                 android:textSize="25dp"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/papeleria"
                 android:layout_width="40dp"
                 android:layout_height="35dp"

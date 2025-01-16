@@ -25,20 +25,18 @@ public class MainActivity extends AppCompatActivity {
         // Código usado para identificar resultados de la actividades (gestiona la comunicacion entre dos actividades
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 10;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //activa un diseño a pantalla completa en dispositivos modernos
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
         RecyclerView palabraRecycleView = findViewById(R.id.Palabra);
 
-        final PalabraRVAdapter adapter = new PalabraRVAdapter(new PalabraRVAdapter.WordDiff());
+        final PalabraRVAdapter adapter = new PalabraRVAdapter(new PalabraRVAdapter.WordDiff(), this);
+
         palabraRecycleView.setAdapter(adapter);
         palabraRecycleView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -47,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         palabraViewModel = new ViewModelProvider(this).get(PalabraViewModel.class);
         palabraViewModel.getPalabra().observe(this, palabras ->
                 adapter.submitList(palabras));
+
         // cuando pulsas el boton te lleva a la otra actividad
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener( view -> {
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(
                     getApplicationContext(),
-                   " No se guardo",
+                   " No se guardo,porque es un campo vacío",
                     Toast.LENGTH_LONG).show();
         }
     }

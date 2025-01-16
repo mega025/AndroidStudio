@@ -17,7 +17,7 @@ public class PalabraViewModel  extends AndroidViewModel {
         mPalabraRepository = new PalabraRepository(application);
         mPalabra = mPalabraRepository.getAllPalabras();
     }
-    public void delete(Palabra palabra) {
+    public void delete(Palabra  palabra) {
         mPalabraRepository.delete(palabra);
     }
 
