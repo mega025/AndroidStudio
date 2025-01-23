@@ -9,12 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.mega025.retrofitexample.R;
 
 
 import java.util.List;
@@ -55,13 +53,18 @@ private Context context;
                         .into(detailsImage);
 
                 TextView nameText = detail.findViewById(R.id.Nombre);
-                nameText.setText(drinks.get(holder.getAdapterPosition()).cocktailName);
+                nameText.setText(drinks.get(holder.getAdapterPosition()).getCocktailName());
 
                 TextView idText = detail.findViewById(R.id.idCocktail);
-                idText.setText(drinks.get(holder.getAdapterPosition()).cocktailId);
+                idText.setText(drinks.get(holder.getAdapterPosition()).getCocktailId());
 
                 TextView instructionsText = detail.findViewById(R.id.Intruciones);
-                instructionsText.setText(drinks.get(holder.getAdapterPosition()).intruciones);
+                String instructions = drinks.get(holder.getAdapterPosition()).getInstruction();
+                if (instructions != null && !instructions.isEmpty()) {
+                    instructionsText.setText(instructions);
+                } else {
+                    instructionsText.setText("Instrucciones no disponibles.");
+                }
 
 
 

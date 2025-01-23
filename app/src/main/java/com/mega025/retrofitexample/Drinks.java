@@ -19,15 +19,15 @@ public class Drinks {
         @SerializedName("idDrink")
         public String cocktailId;
 
-        @SerializedName("strInstructions")
-        public String intruciones;
+        @SerializedName("strIBA")
+        public String instruction;
 
-        public String getIntruciones() {
-            return intruciones;
+        public String getInstruction() {
+            return instruction;
         }
 
-        public void setIntruciones(String intruciones) {
-            this.intruciones = intruciones;
+        public void setInstruction(String instruction) {
+            this.instruction = instruction;
         }
 
         public String getCocktailName() {
