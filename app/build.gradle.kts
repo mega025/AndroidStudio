@@ -33,7 +33,7 @@ android {
 
 dependencies {
 
-    implementation (libs.glide)
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
     implementation(libs.retrofit.v2110)

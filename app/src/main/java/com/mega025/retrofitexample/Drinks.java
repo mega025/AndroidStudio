@@ -13,12 +13,35 @@ public class Drinks {
         @SerializedName("strDrink")
         public String cocktailName;
 
-        @SerializedName("strDrinksThum")
-public  String cocktailImageUrl;
+        @SerializedName("strDrinkThumb")
+        public String cocktailImageUrl;
 
         @SerializedName("idDrink")
         public String cocktailId;
 
+        public String getCocktailName() {
+            return cocktailName;
+        }
+
+        public void setCocktailName(String cocktailName) {
+            this.cocktailName = cocktailName;
+        }
+
+        public String getCocktailImageUrl() {
+            return cocktailImageUrl;
+        }
+
+        public void setCocktailImageUrl(String cocktailImageUrl) {
+            this.cocktailImageUrl = cocktailImageUrl;
+        }
+
+        public String getCocktailId() {
+            return cocktailId;
+        }
+
+        public void setCocktailId(String cocktailId) {
+            this.cocktailId = cocktailId;
+        }
     }
 
     public List<Cocktail> getDrinks() {
