@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         if (response.isSuccessful()){
                             Drinks drinks =response.body();
                             lista = drinks.getDrinks();
-                            DrinksRVAdapter adapter = new DrinksRVAdapter(lista);
+                            DrinksRVAdapter adapter = new DrinksRVAdapter(lista,MainActivity.this);
                             principal.setAdapter(adapter);
                         }
                     }

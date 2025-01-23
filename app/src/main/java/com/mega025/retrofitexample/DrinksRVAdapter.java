@@ -1,6 +1,7 @@
 package com.mega025.retrofitexample;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,9 @@ import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.mega025.retrofitexample.R;
+
 
 import java.util.List;
 
@@ -19,11 +23,12 @@ import java.util.List;
 public class DrinksRVAdapter  extends RecyclerView.Adapter<DrinksRVAdapter.MyViewHolder> {
 
 private List<Drinks.Cocktail> drinks;
+private Context context;
+    ViewGroup parent;
 
-
-    public DrinksRVAdapter(List<Drinks.Cocktail> drinks) {
+    public DrinksRVAdapter(List<Drinks.Cocktail> drinks, Context context) {
         this.drinks = drinks;
-
+        this.context = context;
     }
 
     @NonNull
@@ -37,6 +42,38 @@ private List<Drinks.Cocktail> drinks;
     @Override
     public void onBindViewHolder(@NonNull DrinksRVAdapter.MyViewHolder holder, int position) {
         holder.bind(drinks.get(position).getCocktailName(),drinks.get(position).getCocktailImageUrl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View detail = LayoutInflater.from(context)
+                        .inflate(R.layout.cocktailcardpopup, parent, false);
+
+                ImageView detailsImage = detail.findViewById(R.id.imageView);
+                Glide.with(view)
+                        .load(drinks.get(holder.getAdapterPosition()).getCocktailImageUrl())
+                        .into(detailsImage);
+
+                TextView nameText = detail.findViewById(R.id.Nombre);
+                nameText.setText(drinks.get(holder.getAdapterPosition()).cocktailName);
+
+                TextView idText = detail.findViewById(R.id.idCocktail);
+                idText.setText(drinks.get(holder.getAdapterPosition()).cocktailId);
+
+                TextView instructionsText = detail.findViewById(R.id.Intruciones);
+                instructionsText.setText(drinks.get(holder.getAdapterPosition()).intruciones);
+
+
+
+                MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(context)
+                        .setView(detail)
+                        .setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {}
+                        });
+                materialAlertDialogBuilder.show();
+            }
+        });
     }
 
     @Override

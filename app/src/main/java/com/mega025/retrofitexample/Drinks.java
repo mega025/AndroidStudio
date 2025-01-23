@@ -19,6 +19,17 @@ public class Drinks {
         @SerializedName("idDrink")
         public String cocktailId;
 
+        @SerializedName("strInstructions")
+        public String intruciones;
+
+        public String getIntruciones() {
+            return intruciones;
+        }
+
+        public void setIntruciones(String intruciones) {
+            this.intruciones = intruciones;
+        }
+
         public String getCocktailName() {
             return cocktailName;
         }
