@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,10 +18,15 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class DrinksRVAdapter  extends RecyclerView.Adapter<DrinksRVAdapter.MyViewHolder> {
 
 private List<Drinks.Cocktail> drinks;
+private List<Drinks.Cocktail> drinksNew;
 private Context context;
     ViewGroup parent;
 
@@ -44,6 +50,7 @@ private Context context;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 View detail = LayoutInflater.from(context)
                         .inflate(R.layout.cocktailcardpopup, parent, false);
 
@@ -58,13 +65,28 @@ private Context context;
                 TextView idText = detail.findViewById(R.id.idCocktail);
                 idText.setText(drinks.get(holder.getAdapterPosition()).getCocktailId());
 
-                TextView instructionsText = detail.findViewById(R.id.Intruciones);
-                String instructions = drinks.get(holder.getAdapterPosition()).getInstruction();
-                if (instructions != null && !instructions.isEmpty()) {
-                    instructionsText.setText(instructions);
-                } else {
-                    instructionsText.setText("Instrucciones no disponibles.");
-                }
+
+                Call<Drinks> call = ApiClient.getClient().create(ApiInterface.class).getDrinksByid(drinks.get(holder.getAdapterPosition()).getCocktailId());
+                call.enqueue(new Callback<Drinks>() {
+                    @Override
+                    public void onResponse(Call<Drinks> call, Response<Drinks> response) {
+                        if (response.isSuccessful()){
+                            Drinks drinks2 =response.body();
+                            drinksNew = drinks2.getDrinks();
+
+                            TextView instructionsText = detail.findViewById(R.id.Intruciones);
+                            String instructions = drinksNew.get(0).getInstruction();
+                            if (instructions != null && !instructions.isEmpty()) {
+                                instructionsText.setText(instructions);
+                            } else {
+                                instructionsText.setText("Instrucciones no disponibles.");
+                            }
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<Drinks> call, Throwable throwable) {
+                    }
+                });
 
 
 

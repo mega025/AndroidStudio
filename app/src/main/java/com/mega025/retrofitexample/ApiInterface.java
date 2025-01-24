@@ -9,4 +9,6 @@ import retrofit2.http.Query;
 public interface ApiInterface {
     @GET("filter.php")
     Call<Drinks> getDrinksByLicour(@Query("i") String licour);
+    @GET("lookup.php")
+    Call<Drinks> getDrinksByid(@Query("i") String licour);
 }

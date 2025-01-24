@@ -19,7 +19,7 @@ public class Drinks {
         @SerializedName("idDrink")
         public String cocktailId;
 
-        @SerializedName("strIBA")
+        @SerializedName("strInstructionsES")
         public String instruction;
 
         public String getInstruction() {
